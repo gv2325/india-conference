@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 import DraftModeToast from "@/app/components/DraftModeToast";
 import Footer from "@/app/components/Footer";
-// import Header from "@/app/components/Header";
+import { Header1 } from "@/app/components/Header1";
 import { LiveErrorBoundary } from "@/app/components/LiveErrorBoundary";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
@@ -18,6 +18,7 @@ import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { Navbar2, Navbar2Defaults } from "@/app/components/Navbar2";
 import { Footer1, Footer1Defaults } from "./components/Footer1";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: settings } = await sanityFetch({

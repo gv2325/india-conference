@@ -39,9 +39,9 @@ export const Navbar2 = (props: Navbar2Props) => {
     <nav className="flex w-full items-center bg-[#E9E4DD] text-[#2E090D] lg:min-h-18 lg:px-[5%]">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <a href={logo.url}>
-            <img src={logo.src} alt={logo.alt} style={{ height: '50px' }} />
-          </a>
+            <a href={logo.url}>
+            <img src={logo.src} alt={logo.alt} style={{ maxWidth: '160px', height: '38px', width: 'auto' }} />
+            </a>
           <div className="flex items-center gap-4 lg:hidden">
             <div>
               {buttons.map((button, index) => (
@@ -180,8 +180,6 @@ export const Navbar2Defaults: Navbar2Props = {
   },
   navLinks: [
     { title: "Agenda", url: "#" },
-    { title: "Blog", url: "#" },
-    { title: "Contact Us", url: "#" },
     {
       title: "Past Conferences",
       url: "#",
@@ -191,10 +189,12 @@ export const Navbar2Defaults: Navbar2Props = {
         { title: "Look Ma! I did a thing!!", url: "#" },
       ],
     },
+    { title: "Blog", url: "#" },
+    { title: "Contact Us", url: "#" },
   ],
   buttons: [
     {
-      title: "Button",
+      title: "Get Tickets",
       size: "sm",
     },
   ],

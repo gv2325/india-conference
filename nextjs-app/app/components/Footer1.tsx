@@ -135,7 +135,7 @@ export const Footer1Defaults: Footer1Props = {
     src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
     alt: "Logo image",
   },
-  newsletterDescription: "Join our newsletter to stay up to date on features and releases.",
+  newsletterDescription: "Join our newsletter to stay up to date.",
   inputPlaceholder: "Enter your email",
   button: {
     title: "Subscribe",
@@ -146,28 +146,25 @@ export const Footer1Defaults: Footer1Props = {
   <p class='text-xs'>
     By subscribing you agree to with our
     <a href='#' class='underline'>Privacy Policy</a>
-    and provide consent to receive updates from our company.
+    and provide consent to receive updates from our Organization.
   </p>
   `,
   columnLinks: [
     {
-      title: "Column One",
+      title: "Menu",
       links: [
-        { title: "Link One", url: "#" },
-        { title: "Link Two", url: "#" },
-        { title: "Link Three", url: "#" },
-        { title: "Link Four", url: "#" },
-        { title: "Link Five", url: "#" },
+        { title: "Home", url: "#" },
+        { title: "Agenda", url: "#" },
+        { title: "Blog", url: "#" },
+        { title: "Contact Us", url: "#" },
       ],
     },
     {
-      title: "Column Two",
+      title: "Past Events",
       links: [
-        { title: "Link Six", url: "#" },
-        { title: "Link Seven", url: "#" },
-        { title: "Link Eight", url: "#" },
-        { title: "Link Nine", url: "#" },
-        { title: "Link Ten", url: "#" },
+        { title: "Conf 2023", url: "#" },
+        { title: "Conf 2022", url: "#" },
+        { title: "Conf 2021", url: "#" },
       ],
     },
     {
@@ -175,8 +172,6 @@ export const Footer1Defaults: Footer1Props = {
       links: [
         { title: "Facebook", url: "#", icon: <BiLogoFacebookCircle className="size-6" /> },
         { title: "Instagram", url: "#", icon: <BiLogoInstagram className="size-6" /> },
-        { title: "X", url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
-        { title: "LinkedIn", url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
         { title: "Youtube", url: "#", icon: <BiLogoYoutube className="size-6" /> },
       ],
     },

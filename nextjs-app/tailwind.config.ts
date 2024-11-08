@@ -95,7 +95,6 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
         gambarino: ['Gambarino', 'serif'],
         switzer: ['Switzer', 'sans-serif'],
       },

@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
 
 export default {
-  content: ["./app/**/*.{ts,tsx}", "./sanity/**/*.{ts,tsx}"],
+  content: ["./app/**/*.{ts,tsx}", "./sanity/**/*.{ts,tsx}", "./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
@@ -96,11 +96,14 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
+        gambarino: ['Gambarino', 'serif'],
+        switzer: ['Switzer', 'sans-serif'],
       },
     },
   },
   future: {
     hoverOnlyWhenSupported: true,
   },
+  presets: [require("@relume_io/relume-tailwind")],
   plugins: [typography],
 } satisfies Config;

@@ -10,6 +10,8 @@
     "typegen": "sanity typegen generate"
   },
   "dependencies": {
+    "@relume_io/relume-tailwind": "^0.7.0",
+    "@relume_io/relume-ui": "^0.7.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^2.0.0",
     "@tailwindcss/typography": "^0.5.13",

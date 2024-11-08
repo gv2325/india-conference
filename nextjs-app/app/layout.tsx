@@ -9,12 +9,14 @@ import { Toaster } from "sonner";
 
 import DraftModeToast from "@/app/components/DraftModeToast";
 import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
+// import Header from "@/app/components/Header";
 import { LiveErrorBoundary } from "@/app/components/LiveErrorBoundary";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
+import { Navbar2, Navbar2Defaults } from "@/app/components/Navbar2";
+import { Footer1, Footer1Defaults } from "./components/Footer1";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: settings } = await sanityFetch({
@@ -53,32 +55,17 @@ const inter = Inter({
   display: "swap",
 });
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { isEnabled: isDraftMode } = await draftMode();
-
   return (
-    <html lang="en" className={`${inter.variable} bg-white text-black`}>
-      <body>
-        <section className="min-h-screen pt-24">
-          <Toaster />
-          {isDraftMode && (
-            <>
-              <DraftModeToast />
-              <VisualEditing />
-            </>
-          )}
-          <LiveErrorBoundary>
-            <SanityLive />
-          </LiveErrorBoundary>
-          <Header />
-          <main className="">{children}</main>
-          <Footer />
-        </section>
-        <SpeedInsights />
+    <html lang="en">
+      <body className={inter.variable}>
+        <Navbar2 {...Navbar2Defaults} />
+        {children}
+        <Footer1 {...Footer1Defaults} />
       </body>
     </html>
   );

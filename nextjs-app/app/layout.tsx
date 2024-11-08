@@ -18,7 +18,6 @@ import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { Navbar2, Navbar2Defaults } from "@/app/components/Navbar2";
 import { Footer1, Footer1Defaults } from "./components/Footer1";
-import { Html, Head, Main, NextScript } from 'next/document';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: settings } = await sanityFetch({

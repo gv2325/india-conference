@@ -67,6 +67,7 @@ export default function RootLayout({
         <Navbar2 {...Navbar2Defaults} />
         {children}
         <Footer1 {...Footer1Defaults} />
+        <Analytics />
       </body>
     </html>
   );

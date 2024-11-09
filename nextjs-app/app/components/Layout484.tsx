@@ -2,7 +2,7 @@
 
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
-import React, { useRef, useMemo } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -21,26 +21,21 @@ export const Layout484 = (props: Layout484Props) => {
   } as Props;
 
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const words = heading.split(" ");
 
   const { scrollYProgress } = useScroll({
     target: headingRef,
     offset: ["start center", "end center"],
   });
 
-  // Pre-calculate ranges for transforms
-  const transformRanges = useMemo(() => 
-    words.map((_, i) => ({
-      start: i * 0.025,
-      end: (i * 0.025) + 0.025
-    })), [words]
-  );
-
-  // Create transforms using the pre-calculated ranges
-  const transforms = transformRanges.map(({ start, end }) => 
+  const words = heading.split(" ");
+  
+  // Create transforms array at component level
+  const transforms = words.map((_, index) => {
+    const start = index * 0.025;
+    const end = start + 0.025;
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    useTransform(scrollYProgress, [start, end], [0, -50])
-  );
+    return useTransform(scrollYProgress, [start, end], [0, -50]);
+  });
 
   return (
     <section id="relume" className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">

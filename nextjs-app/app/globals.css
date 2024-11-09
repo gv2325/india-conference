@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Switzer', sans-serif;
-    background-color: #E9E4DD;
-    color: #2E090D;
+  font-family: 'Switzer', sans-serif;
+  background-color: #E9E4DD;
+  color: #2E090D;
 }
-  
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Gambarino', serif;
   color: #781E26;

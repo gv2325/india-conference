@@ -73,27 +73,10 @@ export const Footer1 = (props: Footer1Props) => {
     <footer className="px-[5%] py-12 md:py-18 lg:py-20">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-20">
-          <div className="flex flex-col">
+            <div className="flex flex-col">
             <a href={logo.url} className="mb-5 md:mb-6">
-              <img src={logo.src} alt={logo.alt} className="inline-block" />
+              <img src={logo.src} alt={logo.alt} className="inline-block" style={{ width: '160px' }} />
             </a>
-            <p className="mb-5 md:mb-6">{newsletterDescription}</p>
-            <div className="w-full max-w-md">
-              <form
-                className="mb-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-[1fr_max-content] md:gap-y-4"
-                onSubmit={handleSubmit}
-              >
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder={inputPlaceholder}
-                  value={emailInput}
-                  onChange={(e) => setEmailInput(e.target.value)}
-                />
-                <Button {...button}>{button.title}</Button>
-              </form>
-              <div dangerouslySetInnerHTML={{ __html: termsAndConditions }} />
-            </div>
           </div>
           <div className="grid grid-cols-1 items-start gap-y-10 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">
             {columnLinks.map((column, index) => (
@@ -132,14 +115,13 @@ export const Footer1 = (props: Footer1Props) => {
 export const Footer1Defaults: Footer1Props = {
   logo: {
     url: "#",
-    src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
+    src: "/assets/text-logo.png",
     alt: "Logo image",
   },
   newsletterDescription: "Join our newsletter to stay up to date.",
   inputPlaceholder: "Enter your email",
   button: {
     title: "Subscribe",
-    variant: "secondary",
     size: "sm",
   },
   termsAndConditions: `
@@ -156,7 +138,7 @@ export const Footer1Defaults: Footer1Props = {
         { title: "Home", url: "#" },
         { title: "Agenda", url: "#" },
         { title: "Blog", url: "#" },
-        { title: "Contact Us", url: "#" },
+        { title: "Contact Us", url: "/contact" },
       ],
     },
     {

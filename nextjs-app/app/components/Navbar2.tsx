@@ -39,7 +39,7 @@ export const Navbar2 = (props: Navbar2Props) => {
     <nav className="flex w-full items-center bg-[#E9E4DD] text-[#2E090D] lg:min-h-18 lg:px-[5%]">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-            <a href={logo.url}>
+            <a href={logo.url || "/"}>
             <img src={logo.src} alt={logo.alt} style={{ maxWidth: '160px', height: '38px', width: 'auto' }} />
             </a>
           <div className="flex items-center gap-4 lg:hidden">
@@ -174,7 +174,7 @@ const SubMenu = ({ navLink, isMobile }: { navLink: NavLink; isMobile: boolean })
 
 export const Navbar2Defaults: Navbar2Props = {
   logo: {
-    url: "#",
+    url: "/",
     src: "/assets/text-logo.png",
     alt: "Text Logo",
   },
@@ -190,7 +190,7 @@ export const Navbar2Defaults: Navbar2Props = {
       ],
     },
     { title: "Blog", url: "#" },
-    { title: "Contact Us", url: "#" },
+    { title: "Contact Us", url: "/contact" },
   ],
   buttons: [
     {

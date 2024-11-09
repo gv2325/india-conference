@@ -37,7 +37,7 @@ function resolveHref(documentType?: string, slug?: string): string | undefined {
 
 export default defineConfig({
   name: 'default',
-  title: 'Clean Next.js + Sanity',
+  title: 'India Conference',
 
   projectId,
   dataset,
